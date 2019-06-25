@@ -3,7 +3,6 @@ int _putchar(char);
  * main - Entry point
  *
  * Return: 0 Always (Success)
- *
  */
 int main(void)
 {

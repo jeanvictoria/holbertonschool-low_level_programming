@@ -1,13 +1,15 @@
 #include "holberton.h"
 /**
- * _isdigit - fuction for evaluate if have digit.
- * @c: variable to evaluate
+ * mul - fuction for evaluate if have digit.
+ * @a: integer a
+ * @b: integer b
  *
- * Return: Always 0.
+ * Return: Result mul
  */
 int mul(int a, int b)
 {
-	int r=a*b;
+	int r = a * b;
+
 	return (r);
 }
 

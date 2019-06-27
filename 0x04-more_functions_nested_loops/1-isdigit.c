@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * isdigit - fuction for evaluate if have digit.
+ * _isdigit - fuction for evaluate if have digit.
  * @c: variable to evaluate
  *
  * Return: Always 0.

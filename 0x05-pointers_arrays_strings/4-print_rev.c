@@ -22,10 +22,10 @@ void print_rev(char *s)
  */
 int _strlen(char *s)
 {
-        int iterator = 0;
+	int iterator = 0;
 
-        while (*(s + iterator) != '\0')
-                iterator++;
-        return (iterator);
+	while (*(s + iterator) != '\0')
+		iterator++;
+	return (iterator);
 }
 

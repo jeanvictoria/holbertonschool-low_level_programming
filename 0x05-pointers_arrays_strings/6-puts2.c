@@ -5,13 +5,13 @@
  */
 void puts2(char *str)
 {
-	int cont = 0;
+	int iterator = 0;
 
-	while (*(str + cont) != '\0')
+	while (*(str + iterator) != '\0')
 	{
-		if (cont % 2 == 0)
-			_putchar(*(str + cont));
-		cont++;
+		if (iterator % 2 == 0)
+			_putchar(*(str + iterator));
+		iterator++;
 	}
 	_putchar(10);
 }

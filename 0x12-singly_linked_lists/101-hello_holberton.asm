@@ -1,16 +1,12 @@
-extern printf
-section .data
-	    msg db "Hello, Holberton", 0x0a ; 0x0a = \n
-	    size equ $ - msg
+	global 	main
+	extern 	printf
 
 	section .text
-	    global main
 main:
-	        mov eax, 4 	; syscall write
-	        mov ebx, 1	; standard out
-	        mov ecx, msg	; address of string
-	        mov edx, size  	; size to write
-	        int 0x80       	; invoke kernel
-
-	        mov eax, 0 	; syscall exit
-	        int 0x80
+	mov	rdi, format
+	mov	rax, 0
+	call	printf
+	mov	rax, 0
+	ret
+format:
+	db "Hello, Holberton", 10, 0

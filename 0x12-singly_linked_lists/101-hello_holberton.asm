@@ -1,3 +1,4 @@
+extern printf
 section .data
 	    msg db "Hello, Holberton", 0x0a ; 0x0a = \n
 	    size equ $ - msg

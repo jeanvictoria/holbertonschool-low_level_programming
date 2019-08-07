@@ -1,21 +1,42 @@
 #include "lists.h"
-#include <stdio.h>
 /**
-* print_listint - returns the ints inside the list and the number of nodes
-*@h: takes the start of the single list.
-*Return: the size of the list.
-*/
+ * print_number - print any integer number
+ * @number: number
+ */
+void print_number(int number)
+{
+	int aux;
+
+	if (number < 0)
+	{
+		printf("%c", '-');
+		aux = number / 10;
+		print_number(-aux);
+		aux = number % 10;
+		print_number(-aux);
+	}
+	else
+	{
+		if (number > 9)
+			print_number(number / 10);
+		printf("%c", (number % 10) + '0');
+	}
+
+}
+/**
+ * print_listint - print all elements in list
+ * @h: node
+ * Return: return length of list
+ */
 size_t print_listint(const listint_t *h)
 {
-	unsigned int count;
-	const listint_t *ptr;
+	int nodes = 0;
 
-	ptr = h;
-
-	for (count = 0; ptr != NULL; count++)
+	while (h)
 	{
-		printf("%d\n", ptr->n);
-		ptr = ptr->next;
+		printf("%d\n", h->n);
+		h = h->next;
+		nodes++;
 	}
-	return (count);
+	return (nodes);
 }
